@@ -214,7 +214,10 @@ class ScannerController: NSObject, ICScannerDeviceDelegate {
             functionalUnit.resolution = resolutionIndex
         }
 
-        if configuration.config[ScanlineConfigOptionMono] != nil {
+        if configuration.config[ScanlineConfigOptionGrayscale] != nil {
+            functionalUnit.pixelDataType = .gray
+            functionalUnit.bitDepth = .depth8Bits
+        } else if configuration.config[ScanlineConfigOptionMono] != nil {
             functionalUnit.pixelDataType = .BW
             functionalUnit.bitDepth = .depth1Bit
         } else {

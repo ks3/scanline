@@ -53,6 +53,10 @@ BOOL debugLogging = NO;
              ScanlineConfigOptionA4: @{
                      @"description": @"Scan a A4 size page"
                      },
+             ScanlineConfigOptionGrayscale: @{
+                     @"synonyms": @[@"gray"],
+                     @"description": @"Scan in grayscale"
+                     },
              ScanlineConfigOptionMono: @{
                      @"synonyms": @[@"bw"],
                      @"description": @"Scan in monochrome (black and white)"
